@@ -97,10 +97,18 @@ def send_mail(title, url, price, currency):
     server.quit()
 
 
-# Start tracking
-while (True):
-    check_price(**XIAOMI_LAPTOP)
-    check_price(**HUAWEI_P30_PRO)
-    check_price(**LG_TV_32)
-    # Check if the price has fallen down twice a day
-    time.sleep(60 * 60 * 12)
+# Start tracking - this is no longer needed because Heroku Scheduler addon is
+# taking care of the cron job
+# while (True):
+#     check_price(**XIAOMI_LAPTOP)
+#     check_price(**HUAWEI_P30_PRO)
+#     check_price(**LG_TV_32)
+#     Check if the price has fallen down twice a day
+#     time.sleep(60 * 60 * 12)
+
+
+# Just run the check_price function manually and the Heroku Scheduler cron job is scheduled to run
+# tracker.py script on the specified period of time
+check_price(**XIAOMI_LAPTOP)
+check_price(**HUAWEI_P30_PRO)
+check_price(**LG_TV_32)
