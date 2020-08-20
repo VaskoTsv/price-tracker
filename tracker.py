@@ -8,7 +8,7 @@ XIAOMI_LAPTOP = {
     'url': 'https://www.gearbest.com/ultrabooks/pp_3008693117937832.html',
     'title_classes': ["goodsIntro_title"],
     'price_classes': ["goodsIntro_price", "js-currency", "js-panelIntroPrice"],
-    'target_price': 650,
+    'target_price': 1650,
     'currency': 'Euro',
 }
 
