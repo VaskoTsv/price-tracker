@@ -12,14 +12,6 @@ XIAOMI_LAPTOP = {
     'currency': 'Euro',
 }
 
-HUAWEI_P30_PRO = {
-    'url': 'https://www.technopolis.bg/bg/Mobilni-telefoni/Smartfon-GSM-HUAWEI-P30-PRO-DS-BLACK/p/536838',
-    'title_classes': ["product-name"],
-    'price_classes': ["price-value"],
-    'target_price': 700,
-    'currency': 'BGN',
-}
-
 LG_TV_32 = {
     'url': 'https://www.technopolis.bg/bg/Televizori/Televizor-LG-32LK510BPLD-LED/p/16435',
     'title_classes': ["product-name"],
@@ -110,5 +102,4 @@ def send_mail(title, url, price, currency):
 # Just run the check_price function manually and the Heroku Scheduler cron job is scheduled to run
 # tracker.py script on the specified period of time
 check_price(**XIAOMI_LAPTOP)
-check_price(**HUAWEI_P30_PRO)
 check_price(**LG_TV_32)
